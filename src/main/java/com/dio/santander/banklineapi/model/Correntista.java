@@ -1,6 +1,12 @@
 package com.dio.santander.banklineapi.model;
 
-import javax.persistence.*;
+import javax.persistence.Table;
+import javax.persistence.Column;
+import javax.persistence.Embedded;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 @Entity
 @Table(name = "tab_correntista")
@@ -15,7 +21,7 @@ public class Correntista {
 	@Column(length = 60)
 	private String nome;
 	
-	//as informações serão copiadas da classe Conta
+
 	@Embedded
 	private Conta conta;
 	
